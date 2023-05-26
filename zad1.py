@@ -15,22 +15,17 @@ def win_and_pooh(song):
     faz = ['ц', 'к', 'н', 'г', 'ш', 'щ', 'з', 'х', 'ф', 'в', 'п', 'р', 'л', 'д', 'ж', 'ч', 'с', 'м', 'т', 'б']
     parts = song.split()
     itog_a = list()
-    itog_z = list()
-    e = 0
     for item in parts:
         a = 0
         z = 0
         for letter in item:
             if letter in volwes:
                 a += 1
-            if letter in faz:
-                z += 1
         itog_a.append(a)
-        itog_z.append(z)
     if a == 0:
         print('Пам парам')
     elif len(set(itog_a)) == 1:
         print('Парам пам-пам')
     else:
         print('Пам парам')
-win_and_pooh("пара-ра-рам рам-пам-папам па-ра-па-да")
+win_and_pooh(input("введите рифму "))
